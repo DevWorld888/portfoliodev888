@@ -29,7 +29,7 @@ export default function Section({
   }
 
   return (
-    <section id={id} className="min-h-screen w-full flex flex-col justify-center scroll-mt-24 px-4 sm:px-6 md:px-12 py-16 border border-zinc-200">
+    <section id={id} className="min-h-screen w-full flex flex-col justify-center scroll-mt-8 px-4 sm:px-6 md:px-12 py-16">
       <div className="w-full max-w-6xl mx-auto">
         <p className="text-sm sm:text-base font-semibold text-zinc-500">{subtitle}</p>
         <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
