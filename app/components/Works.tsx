@@ -9,40 +9,40 @@ const Works = () => {
   const projects = [
     {
       id: 1,
-      title: 'Creative Design',
-      category: 'Creative',
+      title: 'Prisma Coatings',
+      category: 'Develope',
       image: '/assets/project1.jpg', // You'll need to add actual images
     },
     {
       id: 2,
-      title: 'Web Development',
+      title: 'Agency kword',
       category: 'Design',
       image: '/assets/project2.jpg',
     },
     {
       id: 3,
-      title: 'Mobile App',
+      title: 'Python project',
       category: 'Art',
       image: '/assets/project3.jpg',
     },
-    {
-      id: 4,
-      title: 'Brand Identity',
-      category: 'Branding',
-      image: '/assets/project4.jpg',
-    },
-    {
-      id: 5,
-      title: 'UI/UX Design',
-      category: 'Design',
-      image: '/assets/project5.jpg',
-    },
-    {
-      id: 6,
-      title: 'Digital Art',
-      category: 'Art',
-      image: '/assets/project6.jpg',
-    },
+    // {
+    //   id: 4,
+    //   title: 'Brand Identity',
+    //   category: 'Branding',
+    //   image: '/assets/project4.jpg',
+    // },
+    // {
+    //   id: 5,
+    //   title: 'UI/UX Design',
+    //   category: 'Design',
+    //   image: '/assets/project5.jpg',
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Digital Art',
+    //   category: 'Art',
+    //   image: '/assets/project6.jpg',
+    // },
   ]
 
   const filteredProjects = activeFilter === 'Everything' 
@@ -59,7 +59,7 @@ const Works = () => {
           </h2> */}
           
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
+          {/* <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
             {filters.map((filter) => (
               <button
                 key={filter}
@@ -73,7 +73,7 @@ const Works = () => {
                 {filter}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Projects Grid */}

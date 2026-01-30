@@ -12,51 +12,51 @@ interface ExperienceItem {
 const experienceData: ExperienceItem[] = [
   {
     id: 1,
-    period: "2019 - Present",
-    title: "Academic Degree",
-    description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-    type: "education",
-    icon: "🎓"
+    period: "Aug 2021 – Nov 2022",
+    title: "Software Engineer – Whitesoft Pty Ltd | Brisbane-Remote, Australia",
+    description: "Built and maintained responsive and performant web applications using React.js and Materialize.",
+    type: "work",
+    icon: "💼"
   },
   {
     id: 2,
-    period: "2019 - Present", 
-    title: "Web Designer",
-    description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+    period: "Mar 2020 – Jun 2021", 
+    title: "Frontend Developer – Intevo S.A.S | Bogotá, Colombia",
+    description: "Developed and maintained internal tools for process automation using JavaScript, HTML, and CSS.`",
     type: "work",
     icon: "💼"
   },
   {
     id: 3,
-    period: "2017 - 2013",
+    period: "2012",
     title: "Bachelor's Degree",
-    description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+    description: "Systems Engineer",
     type: "education",
     icon: "🎓"
   },
   {
     id: 4,
-    period: "2017 - 2013",
-    title: "Front-End Developer",
-    description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+    period: "Jan 2023 – Present",
+    title: "Independent Software Projects | Sydney, Australia & Remote",
+    description: "Building personal and commercial projects focused on AI-powered automation and Next.js full-stack apps.",
     type: "work",
     icon: "💼"
   },
   {
     id: 5,
-    period: "2013 - 2009",
-    title: "Honours Degree",
-    description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+    period: "2012",
+    title: "IT Security Specialist ",
+    description: "",
     type: "education",
     icon: "🎓"
   },
   {
     id: 6,
-    period: "2013 - 2009",
-    title: "Back-End Developer",
-    description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-    type: "work",
-    icon: "💼"
+    period: "2007",
+    title: "Technologist in Systems Design & Management",
+    description: "",
+    type: "education",
+    icon: "🎓"
   }
 ];
 
