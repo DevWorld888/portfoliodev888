@@ -1,6 +1,42 @@
-import React from 'react'
-
+'use client';
+import React, { useState } from 'react'
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+   
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ...formData  })
+      });
+
+      const result = await response.json();
+      if (result.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {   
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again later.');
+    }
+  };
+
+   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
     <section className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -17,7 +53,7 @@ const Contact = () => {
               <p className="text-lg text-gray-600 mb-6">
                 Don't like forms? Send me an{' '}
                 <a 
-                  href="mailto:your-email@example.com" 
+                  href="mailto:augustocsuarez1985@gmail.com" 
                   className="text-red-500 hover:text-red-600 underline"
                 >
                   email
@@ -47,23 +83,27 @@ const Contact = () => {
 
           {/* Right side - Contact form */}
           <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Name and Email row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your name"
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                     required
+                    onChange={handleInputChange}
                   />
                 </div>
                 <div>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email address"
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                     required
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -72,9 +112,11 @@ const Contact = () => {
               <div>
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all duration-300 text-gray-900 placeholder-gray-500"
                   required
+                  onChange={handleInputChange}
                 />
               </div>
 
@@ -82,9 +124,11 @@ const Contact = () => {
               <div>
                 <textarea
                   placeholder="Message"
+                  name='message'
                   rows={6}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all duration-300 resize-none text-gray-900 placeholder-gray-500"
                   required
+                  onChange={handleInputChange}
                 ></textarea>
               </div>
 

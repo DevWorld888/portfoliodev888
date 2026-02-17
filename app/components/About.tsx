@@ -27,9 +27,13 @@ const About = () => {
                 </p>
                 
                 {/* Download CV Button */}
-                <button className="mt-6 bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+                <a 
+                  href="/assets/files/ISRAEL AUGUSTO CÁCERES SUÁREZ (1).pdf"
+                  download="CV_Israel_Caceres.pdf"
+                  className="mt-6 bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300 inline-block text-center"
+                >
                   Download CV
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 export default function Page() {
   return (
     <div className="">
-      <Section id="home" title="Israel Augusto C." subtitle="FULL-STACK DEVELOPER" fullscreen={true}>
+      <Section id="home" title="I Augusto C." subtitle="FULL-STACK DEVELOPER" fullscreen={true}>
         <div className="mt-6 flex flex-col gap-6 items-center">
           <p className="text-lg sm:text-xl md:text-2xl text-zinc-700 max-w-3xl leading-relaxed">
             I build production-ready web apps with Next.js, Node.js and Python.

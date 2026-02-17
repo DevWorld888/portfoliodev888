@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const Works = () => {
@@ -11,19 +12,21 @@ const Works = () => {
       id: 1,
       title: 'Prisma Coatings',
       category: 'Develope',
-      image: '/assets/project1.jpg', // You'll need to add actual images
+      image: '/assets/project1.png', // You'll need to add actual images
+      link: 'https://www.prismacoatings.com.au/' // Link to the project
     },
     {
       id: 2,
       title: 'Agency kword',
       category: 'Design',
-      image: '/assets/project2.jpg',
+      image: '/assets/project2.png',
+      link: 'https://agencykword.com/' // Link to the project
     },
     {
       id: 3,
       title: 'Python project',
       category: 'Art',
-      image: '/assets/project3.jpg',
+      image: '/assets/project3.png',
     },
     // {
     //   id: 4,
@@ -84,7 +87,11 @@ const Works = () => {
               className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
             >
               {/* Project Image */}
-              <div className="relative h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-purple-400 via-pink-400 to-red-400 flex items-center justify-center">
+              <div 
+                className="relative h-48 sm:h-56 lg:h-64 bg-gradient-to-br from-purple-400 via-pink-400 to-red-400 flex items-center justify-center bg-cover bg-center"
+               
+              >
+                <Image src={project.image} alt={project.title} fill />
                 {/* Placeholder for actual image */}
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                   <svg 
@@ -107,7 +114,7 @@ const Works = () => {
                 
                 {/* View Project Button - appears on hover */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-medium shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                  <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-medium shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 cursor-pointer" onClick={() => window.open(project.link, '_blank')}>
                     View Project
                   </button>
                 </div>
