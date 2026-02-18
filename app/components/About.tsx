@@ -28,7 +28,7 @@ const About = () => {
                 
                 {/* Download CV Button */}
                 <a 
-                  href="/assets/files/ISRAEL AUGUSTO CÁCERES SUÁREZ (1).pdf"
+                  href="/assets/files/cvIsraelAug.pdf"
                   download="CV_Israel_Caceres.pdf"
                   className="mt-6 bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300 inline-block text-center"
                 >
